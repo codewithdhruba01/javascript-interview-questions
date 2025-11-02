@@ -648,7 +648,7 @@ userDetails("John");
 
 ---
 
-### 24. How do you decode or encode a URL in JavaScript?
+### 27. How do you decode or encode a URL in JavaScript?
 
 `encodeURI()` function is used to encode a URL. This function requires a URL string as a parameter and returns that encoded string.
 `decodeURI()` function is used to decode a URL. This function requires an encoded URL string as a parameter and returns that decoded string.
@@ -672,7 +672,7 @@ Here’s your **Q25: What is memoization** written exactly in the same clean Mar
 
 ---
 
-### 25. What is memoization
+### 28. What is memoization
 
 Memoization is a functional programming technique that attempts to increase a function’s performance by caching its previously computed results.
 Each time a memoized function is called, its parameters are used to index the cache.
@@ -707,7 +707,7 @@ console.log(addition(20)); // output: 40 cached
 
 ---
 
-### 26. What is Hoisting
+### 29. What is Hoisting
 
 Hoisting is a JavaScript mechanism where variables, function declarations, and classes are moved to the top of their scope before code execution.
 Remember that JavaScript only hoists **declarations**, not **initializations**.
