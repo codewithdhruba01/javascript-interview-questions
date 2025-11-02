@@ -36,8 +36,9 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 24 | [What is a higher-order function?](#24-what-is-a-higher-order-function) |
 | 25 | [What are lambda expressions or arrow functions?](#25-what-are-lambda-expressions-or-arrow-functions) |
 | 26 | [What is the difference between let and var?](#26-what-is-the-difference-between-let-and-var) |
-
----
+| 27 | [How do you decode or encode a URL in JavaScript?](#27-how-do-you-decode-or-encode-a-url-in-javaScript?) |
+| 28 | [What is memoization](#28-what-is-memoization) |
+| 29 | [What is Hoisting](#29-what-is-hoisting) |
 
 ---
 
@@ -644,5 +645,100 @@ userDetails("John");
 ```
 
 [🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 24. How do you decode or encode a URL in JavaScript?
+
+`encodeURI()` function is used to encode a URL. This function requires a URL string as a parameter and returns that encoded string.
+`decodeURI()` function is used to decode a URL. This function requires an encoded URL string as a parameter and returns that decoded string.
+
+> **Note:** If you want to encode characters such as `/ ? : @ & = + $ #`, then you need to use `encodeURIComponent()` instead of `encodeURI()`.
+
+```javascript
+let uri = "employeeDetails?name=john&occupation=manager";
+let encoded_uri = encodeURI(uri);
+let decoded_uri = decodeURI(encoded_uri);
+
+console.log("Encoded URI:", encoded_uri);
+console.log("Decoded URI:", decoded_uri);
+```
+
+🔙 [Back to Top](#table-of-contents)
+
+---
+
+Here’s your **Q25: What is memoization** written exactly in the same clean Markdown style as the image you uploaded 👇
+
+---
+
+### 25. What is memoization
+
+Memoization is a functional programming technique that attempts to increase a function’s performance by caching its previously computed results.
+Each time a memoized function is called, its parameters are used to index the cache.
+If the data is already present, it returns the cached result without executing the entire function again.
+Otherwise, the function is executed and the new result is added to the cache.
+
+Let’s take an example of an adding function with memoization:
+
+```javascript
+const memoizeAddition = () => {
+  let cache = {};
+  return (value) => {
+    if (value in cache) {
+      console.log("Fetching from cache");
+      return cache[value]; // Here, cache.value cannot be used as property name starts with a number
+    } else {
+      console.log("Calculating result");
+      let result = value + 20;
+      cache[value] = result;
+      return result;
+    }
+  };
+};
+
+// returned function from memoizeAddition
+const addition = memoizeAddition();
+console.log(addition(20)); // output: 40 calculated
+console.log(addition(20)); // output: 40 cached
+```
+
+🔙 [Back to Top](#table-of-contents)
+
+---
+
+### 26. What is Hoisting
+
+Hoisting is a JavaScript mechanism where variables, function declarations, and classes are moved to the top of their scope before code execution.
+Remember that JavaScript only hoists **declarations**, not **initializations**.
+
+Let’s take a simple example of variable hoisting:
+
+```javascript
+console.log(message); // output: undefined
+var message = "The variable has been hoisted";
+```
+
+The above code looks like this to the interpreter:
+
+```javascript
+var message;
+console.log(message);
+message = "The variable has been hoisted";
+```
+
+In the same fashion, function declarations are hoisted too:
+
+```javascript
+message("Good morning"); // Good morning
+
+function message(name) {
+  console.log(name);
+}
+```
+
+This hoisting behavior allows functions to be safely used in code before they are declared.
+
+🔙 [Back to Top](#table-of-contents)
 
 ---
