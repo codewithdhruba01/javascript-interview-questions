@@ -36,9 +36,10 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 24 | [What is a higher-order function?](#24-what-is-a-higher-order-function) |
 | 25 | [What are lambda expressions or arrow functions?](#25-what-are-lambda-expressions-or-arrow-functions) |
 | 26 | [What is the difference between let and var?](#26-what-is-the-difference-between-let-and-var) |
-| 27 | [How do you decode or encode a URL in JavaScript?](#27-how-do-you-decode-or-encode-a-url-in-javaScript?) |
+| 27 | [How do you decode or encode a URL in JavaScript?](#27-how-do-you-decode-or-encode-a-url-in-javascript) |
 | 28 | [What is memoization](#28-what-is-memoization) |
 | 29 | [What is Hoisting](#29-what-is-hoisting) |
+| 30 | [Explain the JavaScript event loop and how microtasks differ from macrotasks.](#30-what-is-the-javascript-event-loop) |
 
 ---
 
@@ -742,3 +743,71 @@ This hoisting behavior allows functions to be safely used in code before they ar
 🔙 [Back to Top](#table-of-contents)
 
 ---
+
+### 30. What is the JavaScript Event Loop
+
+JavaScript is **single-threaded**, meaning it executes one piece of code at a time on a single main thread.
+To handle asynchronous operations (like `setTimeout`, `fetch`, or `Promises`), JavaScript uses the **event loop**.
+
+The **event loop** continuously checks:
+
+1. If the **call stack** (where JS executes functions) is empty.
+2. If the **task queues** have any pending callbacks to run.
+3. It then **takes the next task** from the queue and pushes it onto the call stack.
+
+### The Two Types of Task Queues
+
+There are **two major queues** where async callbacks are placed:
+
+#### 1. **Macrotasks (a.k.a. Tasks)**
+
+These are large, independent units of work.
+Examples:
+
+* `setTimeout()`
+* `setInterval()`
+* `setImmediate()` (Node.js)
+* `I/O events`
+* `requestAnimationFrame()`
+
+>After each macrotask, the event loop checks for microtasks before moving to the next one.
+
+#### 2. **Microtasks**
+
+Microtasks are smaller, higher-priority tasks meant to run **immediately after the current execution context**, before any new macrotask starts.
+
+Examples:
+
+* `Promise.then()`, `Promise.catch()`, `Promise.finally()`
+* `queueMicrotask()`
+* `MutationObserver`
+
+>All queued microtasks run **right after the current script or macrotask finishes**, and before the next macrotask starts.
+
+### Example
+
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Macrotask");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Microtask");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```
+Start
+End
+Microtask
+Macrotask
+```
+
+[🔝 Back to Top](#-table-of-contents)
+
