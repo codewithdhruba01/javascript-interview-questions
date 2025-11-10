@@ -40,6 +40,10 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 28 | [What is memoization](#28-what-is-memoization) |
 | 29 | [What is Hoisting](#29-what-is-hoisting) |
 | 30 | [Explain the JavaScript event loop and how microtasks differ from macrotasks.](#30-what-is-the-javascript-event-loop) |
+| 31 | [What is the DOM in JavaScript? ](#31-what-is-the-dom-in-javascript) |
+| 32 | [How do you select an element by its ID in JavaScript?](#32-how-do-you-select-an-element-by-its-id-in-javascript) |
+| 33 | [What are arrow functions in JavaScript?](#33-what-are-arrow-functions-in-javascript) |
+
 
 ---
 
@@ -799,3 +803,56 @@ Macrotask
 ```
 
 [🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 31. What is the DOM in JavaScript
+The DOM (Document Object Model) is a representation of the HTML structure as 
+objects, allowing JavaScript to interact with and manipulate the content and layout.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 32. How do you select an element by its ID in JavaScript
+Use `document.getElementById('id')` to select an element by its ID. 
+
+* **How do you add a class to an HTML element using JavaScript?** </br>
+-> Use `element.classList.add('class-name')` to add a class to an element.
+  
+* **How do you remove an element from the DOM in JavaScript?** </br>
+-> Use `element.remove()` to remove an element from the DOM.
+
+* **How do you change the text content of an element in JavaScript?** </br>
+-> Use `element.textContent = 'New text'` to change the text of an element.
+  
+* **What is a for loop in JavaScript?** </br>
+-> A for loop is used to execute a block of code a certain number of times. Example: for 
+`(let i = 0; i < 5; i++)`  `{ console.log(i); }`.
+
+* **What is an if-else statement in JavaScript?** </br>
+-> An `if-else` statement executes a block of code if a condition is true, otherwise it runs 
+the code in the `else` block.
+
+* **What is the purpose of the switch statement in JavaScript?** </br>
+-> A `switch` statement allows you to execute different blocks of code based on the value 
+of a variable.
+
+* **What is a while loop in JavaScript?** </br>
+-> A `while` loop repeatedly executes a block of code as long as a specified condition is 
+true.
+
+* **How do you exit a loop in JavaScript?** </br>
+-> Use the `break` statement to exit a loop prematurely.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 33. What are arrow functions in JavaScript
+Arrow functions are a shorthand syntax for writing functions in JavaScript. Example: 
+``const add = (a, b) => a + b;``.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
