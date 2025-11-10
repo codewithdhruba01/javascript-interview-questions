@@ -297,7 +297,7 @@ console.log(a, typeof a); // null "object"
 console.log(b, typeof b); // undefined "undefined"
 ```
 
-[🔝 Back to Top](#-table-of-contents)
+[🔼 Back to Top](#-table-of-contents)
 
 ---
 
@@ -320,15 +320,8 @@ console.log("End");
 // Output: Start → End → Async Task
 ```
 
-[🔝 Back to Top](#-table-of-contents)
+[🔼 Back to Top](#-table-of-contents)
 
----
-
-Perfect 👍 — here’s **Part 2 (Questions 14–26)** of your **JavaScript Interview Questions** section, following the same interactive and detailed format you liked (with collapsible answers and “Back to top” links).
-
-You can add this part **below Part 1** in your `README.md` file:
-
----
 
 ### 14. Explain the concept of event-driven programming in JavaScript.
 
@@ -344,7 +337,7 @@ document.getElementById("btn").addEventListener("click", () => {
 
 Here, the function only executes **when** the click event happens.
 
-🧩 **Key Points:**
+**Key Points:**
 
 * JavaScript is event-driven.
 * It uses **event listeners** and **callbacks**.
@@ -372,7 +365,7 @@ setTimeout(() => console.log("Async Task"), 2000);
 console.log("End");
 ```
 
-🧩 **Output:**
+**Output:**
 
 ```
 Start
@@ -400,7 +393,7 @@ try {
 }
 ```
 
-🧩 **Also:**
+**Also:**
 
 ```javascript
 fetch("https://api.example.com")
@@ -429,7 +422,7 @@ import { add } from './math.js';
 console.log(add(2, 3)); // 5
 ```
 
-🧩 **Benefits:**
+ **Benefits:**
 
 * Code reusability
 * Clear organization
@@ -456,7 +449,7 @@ const counter = count();
 console.log(counter.next().value); // 1
 ```
 
-🧩 **Use Case:** Useful for lazy evaluation and asynchronous iteration.
+> **Use Case:** Useful for lazy evaluation and asynchronous iteration.
 
 [🔼 Back to Top](#-table-of-contents)
 
@@ -473,7 +466,7 @@ const add = (a, b) => a + b;
 console.log(add(5, 10)); // 15
 ```
 
-🧩 **Advantages:**
+ **Advantages:**
 
 * Concise syntax
 * Lexically binds `this`
@@ -500,7 +493,7 @@ function curry(a) {
 console.log(curry(2)(3)(4)); // 9
 ```
 
-🧩 **Benefits:**
+ **Benefits:**
 
 * Reusability
 * Function composition
@@ -552,7 +545,7 @@ const user = new Person("John");
 console.log(user.greet()); // Hello John
 ```
 
-🧩 **Inheritance works via** `__proto__` links between objects.
+ **Inheritance works via** `__proto__` links between objects.
 
 [🔼 Back to Top](#-table-of-contents)
 
@@ -612,7 +605,7 @@ const greet = name => `Hello, ${name}!`;
 console.log(greet("John"));
 ```
 
-🧩 **Difference:** Arrow functions do not have their own `this` or `arguments` binding.
+**Difference:** Arrow functions do not have their own `this` or `arguments` binding.
 
 [🔼 Back to Top](#-table-of-contents)
 
@@ -665,11 +658,8 @@ console.log("Encoded URI:", encoded_uri);
 console.log("Decoded URI:", decoded_uri);
 ```
 
-🔙 [Back to Top](#table-of-contents)
+[🔼 Back to Top](#-table-of-contents)
 
----
-
-Here’s your **Q25: What is memoization** written exactly in the same clean Markdown style as the image you uploaded 👇
 
 ---
 
@@ -704,7 +694,7 @@ console.log(addition(20)); // output: 40 calculated
 console.log(addition(20)); // output: 40 cached
 ```
 
-🔙 [Back to Top](#table-of-contents)
+[🔼 Back to Top](#-table-of-contents)
 
 ---
 
@@ -738,9 +728,8 @@ function message(name) {
 }
 ```
 
-This hoisting behavior allows functions to be safely used in code before they are declared.
 
-🔙 [Back to Top](#table-of-contents)
+[🔼 Back to Top](#-table-of-contents)
 
 ---
 
@@ -809,5 +798,4 @@ Microtask
 Macrotask
 ```
 
-[🔝 Back to Top](#-table-of-contents)
-
+[🔼 Back to Top](#-table-of-contents)
