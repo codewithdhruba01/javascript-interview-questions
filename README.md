@@ -853,6 +853,30 @@ true.
 Arrow functions are a shorthand syntax for writing functions in JavaScript. Example: 
 ``const add = (a, b) => a + b;``.
 
+* **What is destructuring in JavaScript?** </br>
+-> Destructuring allows you to extract values from arrays or objects into variables. 
+Example: `const [a, b] = [1, 2];`.
+
+* **What is template literals in JavaScript?** </br>
+-> Template literals are string literals that allow embedded expressions, using backticks (``) 
+and ${} for placeholders.
+
+* **What are default parameters in JavaScript?** </br>
+-> Default parameters allow you to initialize function parameters with default values if no 
+value is passed. 
+
+* **What is the spread operator in JavaScript?** </br>
+-> The `spread` operator (...) allows an iterable to expand in places where multiple 
+arguments are expected.
+
+* **What is the rest parameter in JavaScript?** </br>
+-> The `rest` parameter (...args) allows you to pass an indefinite number of arguments 
+to a function.
+
+* **What are promises in JavaScript?** </br>
+-> Promises represent asynchronous operations that either resolve or reject. Example: 
+`new Promise((resolve, reject) => {})`.
+
 [🔼 Back to Top](#-table-of-contents)
 
 ---
