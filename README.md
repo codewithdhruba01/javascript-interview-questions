@@ -43,6 +43,10 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 31 | [What is the DOM in JavaScript? ](#31-what-is-the-dom-in-javascript) |
 | 32 | [How do you select an element by its ID in JavaScript?](#32-how-do-you-select-an-element-by-its-id-in-javascript) |
 | 33 | [What are arrow functions in JavaScript?](#33-what-are-arrow-functions-in-javascript) |
+| 34 | [What is a pure function ?](#34-what-is-a-pure-function-in-javascript) |
+| 35 | [What are classes in ES6](#35-what-are-classes-in-es6) |
+| 36 | [What are modules?](#36-what-are-modules) |
+| 37 | [What is scope in javascript](#37-what-is-scope-in-javascript) |
 
 
 ---
@@ -876,6 +880,114 @@ to a function.
 * **What are promises in JavaScript?** </br>
 -> Promises represent asynchronous operations that either resolve or reject. Example: 
 `new Promise((resolve, reject) => {})`.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 34. What is a Pure Function in JavaScript
+
+A **pure function** is a function whose output depends *only* on its input arguments and produces **no side effects**.
+This means:
+
+* Given the **same inputs**, it will always return the **same output**.
+* It does **not modify any external variables, objects, or state**.
+
+To understand this better, let’s compare pure and impure functions.
+
+## **Example: Pure Function vs. Impure Function**
+
+### **Impure Function**
+
+```js
+let numbers = [];
+
+const impureAdd = (num) => {
+  return numbers.push(num);
+};
+```
+
+### **Pure Function**
+
+```js
+const pureAdd = (num) => (arr) => {
+  return arr.concat([num]);
+};
+```
+
+### **Usage**
+
+```js
+console.log(impureAdd(5));  // Output: 1
+console.log(numbers);       // Output: [5]
+
+console.log(pureAdd(10)(numbers)); // Output: [5, 10]
+console.log(numbers);              // Still [5]
+```
+
+## **Explanation**
+
+### **Why impureAdd is impure?**
+
+* It modifies the **external array** `numbers`.
+* Each call changes the program's overall state.
+* The returned value depends on how many times the function was called earlier.
+
+Because it alters something outside itself, it is **not a pure function**.
+
+### **Why pureAdd is pure?**
+
+* It never changes the original array.
+* Instead, it **creates and returns a new array** with the added value.
+* Same input → same output, with no side effects.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 35. What are classes in ES6
+
+In ES6, JavaScript classes are mainly **syntactic sugar** over JavaScript’s prototype-based inheritance. Before ES6, inheritance was done using function constructors and prototypes, like this:
+
+```js
+function Bike(model, color) {
+  this.model = model;
+  this.color = color;
+}
+
+Bike.prototype.getDetails = function () {
+  return this.model + " bike has " + this.color + " color";
+};
+```
+
+With ES6, the same structure can be written more cleanly using the `class` syntax:
+
+```js
+class Bike {
+  constructor(model, color) {
+    this.model = model;
+    this.color = color;
+  }
+
+  getDetails() {
+    return this.model + " bike has " + this.color + " color";
+  }
+}
+```
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 36. What are modules
+Modules refer to small units of independent, reusable code and also act as the foundation of many JavaScript design patterns. Most of the JavaScript modules export an object literal, a function, or a constructor
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 37. What is scope in javascript
+Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code.
 
 [🔼 Back to Top](#-table-of-contents)
 
