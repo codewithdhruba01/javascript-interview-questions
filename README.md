@@ -46,7 +46,11 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 34 | [What is a pure function ?](#34-what-is-a-pure-function-in-javascript) |
 | 35 | [What are classes in ES6](#35-what-are-classes-in-es6) |
 | 36 | [What are modules?](#36-what-are-modules) |
-| 37 | [What is scope in javascript](#37-what-is-scope-in-javascript) |
+| 37 | [What is scope in javascript?](#37-what-is-scope-in-javascript) |
+| 38 | [Why do you need modules?](#38-why-do-you-need-modules) |
+| 39 | [How do you manipulate DOM using a service worker](#39-how-do-you-manipulate-dom-using-a-service-worker)
+| 40 | [What is a post message?](#40-what-is-a-post-message)
+
 
 
 ---
@@ -992,3 +996,35 @@ Scope is the accessibility of variables, functions, and objects in some particul
 [🔼 Back to Top](#-table-of-contents)
 
 ---
+
+### 38. Why do you need modules
+
+We need modules in JavaScript because they help:
+
+1. **Break code into smaller parts** (easy to manage).
+2. **Increase reusability** (use the same code multiple times).
+3. **Prevent global scope pollution** (avoid variable conflicts).
+4. **Make maintenance easier** (useful in large projects).
+5. **Keep code clean, organized, and secure.**
+
+**Conclusion:**
+Modules make JavaScript code **organized, reusable, safe, and easier to maintain**.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 39. How do you manipulate DOM using a service worker
+Service worker can't access the DOM directly. But it can communicate with the pages it controls by responding to messages sent via the `postMessage` interface, and those pages can manipulate the DOM.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 40. What is a post message
+**`postMessage` is a method that allows secure cross-origin communication between different Window objects — such as between a parent page and a popup it opened, or between a webpage and an embedded iframe. Normally, scripts running on different pages cannot access each other unless they follow the same-origin policy, which requires the pages to share the same protocol, host, and port. The `postMessage` API provides a safe way to bypass this restriction and exchange data across different origins.**
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
