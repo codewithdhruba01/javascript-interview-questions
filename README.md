@@ -50,6 +50,12 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 38 | [Why do you need modules?](#38-why-do-you-need-modules) |
 | 39 | [How do you manipulate DOM using a service worker](#39-how-do-you-manipulate-dom-using-a-service-worker)
 | 40 | [What is a post message?](#40-what-is-a-post-message)
+| 41 | [What is a Cookie?](#41-what-is-a-cookie)
+| 42 | [What is a promise?](#42-what-is-a-promise)
+| 43 | [Why do we need a Promise in JavaScript](#43-why-do-we-need-a-promise-in-javascript)
+
+
+
 
 
 
@@ -1028,3 +1034,105 @@ Service worker can't access the DOM directly. But it can communicate with the pa
 
 ---
 
+### 41. **What is a Cookie**
+
+A **cookie in JavaScript** is a **small piece of data** stored in the **browser**.
+It is used to **remember the user**, **store login sessions**, **preferences**, or **track activity**.
+
+**In simple words:**
+
+> *Cookie = small data stored in the browser*
+
+> *Example: remembering username, saving theme, storing cart items, or tracking sessions.*
+
+### **JavaScript Example**
+
+#### **1. Set a Cookie**
+
+```js
+document.cookie = "username=John; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+```
+
+#### **2. Get All Cookies**
+
+```js
+console.log(document.cookie);
+```
+
+#### **3. Delete a Cookie**
+
+```js
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+```
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 42. What is a promise?
+A Promise is a JavaScript object that represents the eventual result of an asynchronous operation—whether it succeeds or fails.
+It serves as a placeholder for a value that isn’t available yet but will be provided at some point in the future once the operation completes.
+
+**In simple words:**
+
+> *Promise = an object that guarantees you will get the result in the future*
+
+> It handles the result of async tasks (success or error).
+
+### **3 States of a Promise**
+
+1. **Pending** → The result is not available yet
+2. **Fulfilled** → The operation completed successfully
+3. **Rejected** → The operation failed (error)
+
+### **Simple Example**
+
+```js
+let myPromise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Operation Successful!");
+  } else {
+    reject("Something went wrong!");
+  }
+});
+
+myPromise
+  .then(result => console.log(result)) // Success case
+  .catch(error => console.log(error)); // Error case
+```
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+### 43. **Why do we need a Promise in JavaScript**
+
+We need **Promises** to handle **asynchronous operations** in a clean and manageable way.
+JavaScript runs tasks one by one, so when something takes time—like fetching data from a server—Promises help us handle the result **without blocking** the rest of the code.
+
+
+### **Reasons we need Promises**
+
+**1. To handle asynchronous tasks easily**
+
+Example: fetching data from an API, reading files, waiting for timers.
+
+**2. To avoid “callback hell”**
+
+Promises provide `.then()` and `.catch()` instead of deeply nested callback functions.
+
+**3. To write cleaner and more readable code**
+
+Promises, especially with `async/await`, make asynchronous code look like synchronous code.
+
+**4. Better error handling**
+
+`.catch()` handles all errors in one place, making debugging easier.
+
+ **5. Promises chain smoothly**
+
+You can run async operations step-by-step using `.then()` chaining.
+
+[🔼 Back to Top](#-table-of-contents)
