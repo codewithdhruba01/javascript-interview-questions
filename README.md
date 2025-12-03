@@ -1,9 +1,9 @@
 # JavaScript Interview Questions
-
 A complete collection of **JavaScript interview questions and answers**, explained with code examples and easy-to-understand concepts.  
 Perfect for developers preparing for interviews or revising JavaScript fundamentals.
 
 ---
+
 > Prepare for real interviews with 100+ curated JavaScript problems, runnable in your browser. Every question is selected and reviewed by experienced ex-FAANG interviewers so you practise what actually shows up in interviews — not filler content. We promise: no AI-generated fluff and no fake reviews — just high-quality problems, thoughtful explanations, and honest feedback to level up your interview game.
 
 ## 📋 Table of Contents
