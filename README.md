@@ -54,7 +54,7 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 42 | [What is a promise?](#42-what-is-a-promise)
 | 43 | [Why do we need a Promise in JavaScript](#43-why-do-we-need-a-promise-in-javascript)
 | 44 | [What are Closures](#44-what-are-closures)
-
+| 45 | [What is IndexedDB](#45-what-is-indexedDB)
 
 ---
 
@@ -1137,14 +1137,8 @@ You can run async operations step-by-step using `.then()` chaining.
 ---
 
 ## 44. What are Closures
-
-A **closure** is the combination of a **function bundled (enclosed) together with its lexical environment** within which that function was declared.
-In other words, a closure gives you **access to an outer function’s scope from an inner function**, even after the outer function has finished executing.
-
-A closure is created when:
-
-* A function is defined inside another function
-* The inner function uses variables from the outer function
+A closure is a function that remembers and can access variables from its outer (lexical) scope, even after the outer function has finished executing.
+It is created when an inner function uses variables of its enclosing function.
 
 The closure has access to **three scope chains**:
 
@@ -1184,5 +1178,13 @@ Even after the `Welcome()` function has finished execution,
 the inner function **still remembers and has access to `name`**.
 
 This behavior of remembering variables from the outer scope is called a **closure**.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 45. What is IndexedDB
+
+IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
 
 [🔼 Back to Top](#-table-of-contents)
