@@ -53,10 +53,7 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 41 | [What is a Cookie?](#41-what-is-a-cookie)
 | 42 | [What is a promise?](#42-what-is-a-promise)
 | 43 | [Why do we need a Promise in JavaScript](#43-why-do-we-need-a-promise-in-javascript)
-
-
-
-
+| 44 | [What are Closures](#44-what-are-closures)
 
 
 ---
@@ -1134,5 +1131,58 @@ Promises, especially with `async/await`, make asynchronous code look like synchr
  **5. Promises chain smoothly**
 
 You can run async operations step-by-step using `.then()` chaining.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 44. What are Closures
+
+A **closure** is the combination of a **function bundled (enclosed) together with its lexical environment** within which that function was declared.
+In other words, a closure gives you **access to an outer function’s scope from an inner function**, even after the outer function has finished executing.
+
+A closure is created when:
+
+* A function is defined inside another function
+* The inner function uses variables from the outer function
+
+The closure has access to **three scope chains**:
+
+i. **Its own scope** – variables defined inside its curly braces
+ii. **Outer function’s scope** – variables of the enclosing function
+iii. **Global scope** – globally declared variables
+
+---
+
+### **Example of Closure Concept**
+
+```javascript
+function Welcome(name) {
+  var greetingInfo = function (message) {
+    console.log(message + " " + name);
+  };
+  return greetingInfo;
+}
+
+var myFunction = Welcome("John");
+
+myFunction("Welcome");   // Output: Welcome John
+myFunction("Hello Mr."); // Output: Hello Mr. John
+```
+
+---
+
+### **Explanation**
+
+In the above code:
+
+* `Welcome()` is the **outer function**
+* `greetingInfo()` is the **inner function**
+* The inner function uses the variable `name` from the outer function
+
+Even after the `Welcome()` function has finished execution,
+the inner function **still remembers and has access to `name`**.
+
+This behavior of remembering variables from the outer scope is called a **closure**.
 
 [🔼 Back to Top](#-table-of-contents)
