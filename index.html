@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interview Questions | Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .topic-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .topic-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .topic-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .question-count {
+            background: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .difficulty {
+            color: #666;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #2c3e50;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 JavaScript Interview Questions</h1>
+            <p class="subtitle">Complete Guide with 500+ Questions & Code Examples</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Questions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Topics</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Code Examples</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="topics-grid">
+            <a href="./core-javascript/" class="topic-card">
+                <span class="topic-icon">📚</span>
+                <h3 class="topic-title">Core JavaScript</h3>
+                <p class="topic-description">Fundamental concepts including data types, functions, objects, scope,
+                    closures, and error handling.</p>
+                <div class="topic-meta">
+                    <span class="question-count">50+ Questions</span>
+                    <span class="difficulty">Beginner to Intermediate</span>
+                </div>
+            </a>
+
+            <a href="./es6-plus/" class="topic-card">
+                <span class="topic-icon">⚡</span>
+                <h3 class="topic-title">ES6+ Features</h3>
+                <p class="topic-description">Modern JavaScript syntax including arrow functions, destructuring, classes,
+                    modules, and async/await.</p>
+                <div class="topic-meta">
+                    <span class="question-count">40+ Questions</span>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+            </a>
+
+            <a href="./arrays-objects/" class="topic-card">
+                <span class="topic-icon">📊</span>
+                <h3 class="topic-title">Arrays & Objects</h3>
+                <p class="topic-description">Comprehensive guide to array methods, object manipulation, and advanced
+                    data structure patterns.</p>
+                <div class="topic-meta">
+                    <span class="question-count">45+ Questions</span>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+            </a>
+
+            <a href="./dom-browser-apis/" class="topic-card">
+                <span class="topic-icon">🌐</span>
+                <h3 class="topic-title">DOM & Browser APIs</h3>
+                <p class="topic-description">Browser interaction, DOM manipulation, event handling, and modern web APIs
+                    like localStorage, geolocation.</p>
+                <div class="topic-meta">
+                    <span class="question-count">25+ Questions</span>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+            </a>
+
+            <a href="./async-programming/" class="topic-card">
+                <span class="topic-icon">🔄</span>
+                <h3 class="topic-title">Async Programming</h3>
+                <p class="topic-description">Promises, async/await, event loop, callbacks, generators, and advanced
+                    asynchronous patterns.</p>
+                <div class="topic-meta">
+                    <span class="question-count">30+ Questions</span>
+                    <span class="difficulty">Advanced</span>
+                </div>
+            </a>
+
+            <a href="./node-js/" class="topic-card">
+                <span class="topic-icon">🟢</span>
+                <h3 class="topic-title">Node.js</h3>
+                <p class="topic-description">Server-side JavaScript, file system, HTTP servers, databases,
+                    authentication, and security.</p>
+                <div class="topic-meta">
+                    <span class="question-count">50+ Questions</span>
+                    <span class="difficulty">Intermediate to Advanced</span>
+                </div>
+            </a>
+
+            <a href="./frameworks/" class="topic-card">
+                <span class="topic-icon">⚛️</span>
+                <h3 class="topic-title">Frameworks</h3>
+                <p class="topic-description">React, Vue.js, and Angular - components, state management, routing, and
+                    best practices.</p>
+                <div class="topic-meta">
+                    <span class="question-count">60+ Questions</span>
+                    <span class="difficulty">Intermediate to Advanced</span>
+                </div>
+            </a>
+
+            <a href="./testing/" class="topic-card">
+                <span class="topic-icon">🧪</span>
+                <h3 class="topic-title">Testing</h3>
+                <p class="topic-description">Jest, React Testing Library, unit testing, integration testing, and testing
+                    best practices.</p>
+                <div class="topic-meta">
+                    <span class="question-count">35+ Questions</span>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+            </a>
+
+            <a href="./performance/" class="topic-card">
+                <span class="topic-icon">⚡</span>
+                <h3 class="topic-title">Performance</h3>
+                <p class="topic-description">Optimization techniques, Core Web Vitals, memory management, and
+                    performance monitoring.</p>
+                <div class="topic-meta">
+                    <span class="question-count">30+ Questions</span>
+                    <span class="difficulty">Advanced</span>
+                </div>
+            </a>
+
+            <a href="./design-patterns/" class="topic-card">
+                <span class="topic-icon">🏗️</span>
+                <h3 class="topic-title">Design Patterns</h3>
+                <p class="topic-description">Creational, structural, and behavioral patterns with JavaScript
+                    implementations.</p>
+                <div class="topic-meta">
+                    <span class="question-count">25+ Questions</span>
+                    <span class="difficulty">Advanced</span>
+                </div>
+            </a>
+
+            <a href="./build-tools/" class="topic-card">
+                <span class="topic-icon">🔧</span>
+                <h3 class="topic-title">Build Tools</h3>
+                <p class="topic-description">Webpack, Babel, ESLint, package managers, and modern development workflows.
+                </p>
+                <div class="topic-meta">
+                    <span class="question-count">20+ Questions</span>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="cta-section">
+            <h2 class="cta-title">Ready to Ace Your Interview?</h2>
+            <p class="cta-text">
+                This comprehensive collection covers everything from basic concepts to advanced topics.
+                Practice regularly and understand the underlying principles.
+            </p>
+            <a href="README.md" class="btn">View on GitHub</a>
+            <a href="#topics" class="btn btn-secondary">Browse Topics</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 JavaScript Interview Questions | Built with ❤️ for developers</p>
+        <p>Contribute on <a href="#" style="color: white; text-decoration: underline;">GitHub</a></p>
+    </footer>
+
+    <script>
+        // Simple interactive features
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add loading animation for topic cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.topic-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>

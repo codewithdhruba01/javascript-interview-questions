@@ -1,0 +1,40 @@
+{
+    "name": "javascript-interview-questions",
+    "version": "1.0.0",
+    "description": "Comprehensive collection of JavaScript interview questions and answers with code examples",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "serve": "live-server --port=3000",
+        "build": "webpack --mode=production"
+    },
+    "keywords": [
+        "javascript",
+        "interview-questions",
+        "es6",
+        "nodejs",
+        "react",
+        "vue",
+        "angular",
+        "testing",
+        "performance"
+    ],
+    "author": "Dhrubaraj Pati",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^8.57.0",
+        "jest": "^29.7.0",
+        "live-server": "^1.2.2",
+        "prettier": "^3.2.5",
+        "webpack": "^5.90.3",
+        "webpack-cli": "^5.1.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/codewithdhruba01/javascript-interview-questions"
+    },
+    "homepage": "https://github.com/codewithdhruba01/javascript-interview-questions#readme"
+}

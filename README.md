@@ -6,60 +6,124 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 
 > Prepare for real interviews with 100+ curated JavaScript problems, runnable in your browser. Every question is selected and reviewed by experienced ex-FAANG interviewers so you practise what actually shows up in interviews — not filler content. We promise: no AI-generated fluff and no fake reviews — just high-quality problems, thoughtful explanations, and honest feedback to level up your interview game.
 
-## 📋 Table of Contents
+## 📋 Repository Structure
 
-| No. | Questions |
-|-----|------------|
-| 1 | [What is JavaScript?](#1-what-is-javascript) |
-| 2 | [What are the different data types in JavaScript?](#2-what-are-the-different-data-types-in-javascript) |
-| 3 | [How do you declare variables in JavaScript?](#3-how-do-you-declare-variables-in-javascript) |
-| 4 | [What is the difference between `let`, `const`, and `var`?](#4-what-is-the-difference-between-let-const-and-var) |
-| 5 | [What is the `typeof` operator used for?](#5-what-is-the-typeof-operator-used-for) |
-| 6 | [What is NaN in JavaScript?](#6-what-is-nan-in-javascript) |
-| 7 | [What is a callback function?](#7-what-is-a-callback-function) |
-| 8 | [What is event delegation in JavaScript?](#8-what-is-event-delegation-in-javascript) |
-| 9 | [Explain the concept of prototypal inheritance in JavaScript.](#9-explain-the-concept-of-prototypal-inheritance-in-javascript) |
-| 10 | [What is the `this` keyword in JavaScript?](#10-what-is-the-this-keyword-in-javascript) |
-| 11 | [What are JavaScript promises?](#11-what-are-javascript-promises) |
-| 12 | [Explain the difference between `null` and `undefined` in JavaScript.](#12-explain-the-difference-between-null-and-undefined-in-javascript) |
-| 13 | [What is the event loop in JavaScript?](#13-what-is-the-event-loop-in-javascript) |
-| 14 | [Explain the concept of event-driven programming in JavaScript.](#14-explain-the-concept-of-event-driven-programming-in-javascript) |
-| 15 | [What is the difference between synchronous and asynchronous JavaScript?](#15-what-is-the-difference-between-synchronous-and-asynchronous-javascript) |
-| 16 | [How do you handle errors in JavaScript?](#16-how-do-you-handle-errors-in-javascript) |
-| 17 | [What are JavaScript modules and how do they improve code organization?](#17-what-are-javascript-modules-and-how-do-they-improve-code-organization) |
-| 18 | [What are generators in JavaScript?](#18-what-are-generators-in-javascript) |
-| 19 | [What are arrow functions in JavaScript?](#19-what-are-arrow-functions-in-javascript) |
-| 20 | [Explain the concept of currying in JavaScript.](#20-explain-the-concept-of-currying-in-javascript) |
-| 21 | [What is memoization and how is it useful in JavaScript?](#21-what-is-memoization-and-how-is-it-useful-in-javascript) |
-| 22 | [What is a prototype chain?](#22-what-is-a-prototype-chain) |
-| 23 | [What is a first-class function?](#23-what-is-a-first-class-function) |
-| 24 | [What is a higher-order function?](#24-what-is-a-higher-order-function) |
-| 25 | [What are lambda expressions or arrow functions?](#25-what-are-lambda-expressions-or-arrow-functions) |
-| 26 | [What is the difference between let and var?](#26-what-is-the-difference-between-let-and-var) |
-| 27 | [How do you decode or encode a URL in JavaScript?](#27-how-do-you-decode-or-encode-a-url-in-javascript) |
-| 28 | [What is memoization](#28-what-is-memoization) |
-| 29 | [What is Hoisting](#29-what-is-hoisting) |
-| 30 | [Explain the JavaScript event loop and how microtasks differ from macrotasks.](#30-what-is-the-javascript-event-loop) |
-| 31 | [What is the DOM in JavaScript? ](#31-what-is-the-dom-in-javascript) |
-| 32 | [How do you select an element by its ID in JavaScript?](#32-how-do-you-select-an-element-by-its-id-in-javascript) |
-| 33 | [What are arrow functions in JavaScript?](#33-what-are-arrow-functions-in-javascript) |
-| 34 | [What is a pure function ?](#34-what-is-a-pure-function-in-javascript) |
-| 35 | [What are classes in ES6](#35-what-are-classes-in-es6) |
-| 36 | [What are modules?](#36-what-are-modules) |
-| 37 | [What is scope in javascript?](#37-what-is-scope-in-javascript) |
-| 38 | [Why do you need modules?](#38-why-do-you-need-modules) |
-| 39 | [How do you manipulate DOM using a service worker](#39-how-do-you-manipulate-dom-using-a-service-worker)
-| 40 | [What is a post message?](#40-what-is-a-post-message)
-| 41 | [What is a Cookie?](#41-what-is-a-cookie)
-| 42 | [What is a promise?](#42-what-is-a-promise)
-| 43 | [Why do we need a Promise in JavaScript](#43-why-do-we-need-a-promise-in-javascript)
-| 44 | [What are Closures](#44-what-are-closures)
-| 45 | [What is IndexedDB](#45-what-is-indexedDB)
-| 46 | [What is Collation?](#46-what-is-collation)
-| 47 | [Why do you need web storage](#47-why-do-you-need-web-storage)
-| 48 | [How do you delete a cookie](#48-how-do-you-delete-a-cookie)
-| 49 | [What is promise.all](#49-what-is-promise.all)
-| 50 | [What is undefined property](#50-what-is-undefined-property)
+This repository is organized into comprehensive topic-based folders. Each folder contains detailed interview questions with code examples and explanations.
+
+### 📁 [Core JavaScript](./core-javascript/) - Fundamental JavaScript concepts
+- Data types, variables, operators
+- Functions, scope, closures
+- Objects, arrays, prototypes
+- Error handling, modules
+
+### 📁 [ES6+ Features](./es6-plus/) - Modern JavaScript (ES6 and beyond)
+- Arrow functions, template literals, destructuring
+- Classes, modules, promises
+- Async/await, generators, proxies
+- Maps, sets, symbols, iterators
+
+### 📁 [Arrays & Objects](./arrays-objects/) - Array and object manipulation
+- Array methods (map, filter, reduce, etc.)
+- Object methods and manipulation
+- Advanced patterns and techniques
+- Performance considerations
+
+### 📁 [DOM & Browser APIs](./dom-browser-apis/) - Browser interaction
+- DOM manipulation and traversal
+- Event handling and delegation
+- Browser APIs (localStorage, geolocation, etc.)
+- Web APIs (Fetch, WebSockets, Service Workers)
+
+### 📁 [Asynchronous Programming](./async-programming/) - Async patterns
+- Callbacks, promises, async/await
+- Event loop, microtasks/macrotasks
+- Generators, async iterators
+- Error handling in async code
+
+### 📁 [Node.js](./node-js/) - Server-side JavaScript
+- Node.js fundamentals and architecture
+- File system operations, streams
+- HTTP servers, Express.js, middleware
+- Database integration, authentication, security
+
+### 📁 [Build Tools & Development](./build-tools/) - Development workflow
+- Package managers (npm, yarn, pnpm)
+- Bundlers (Webpack, Rollup, Vite)
+- Task runners (Gulp, Grunt)
+- Development tools (ESLint, Prettier, Husky)
+
+### 📁 [Testing](./testing/) - Testing methodologies
+- Jest testing framework
+- React Testing Library
+- Unit, integration, and E2E testing
+- Test coverage and best practices
+
+### 📁 [Frameworks](./frameworks/) - Popular JavaScript frameworks
+- **React**: Components, hooks, state management, performance
+- **Vue.js**: Vue instance, templates, Vuex, Composition API
+- **Angular**: Components, services, dependency injection, CLI
+
+### 📁 [Performance](./performance/) - Optimization techniques
+- Performance metrics and monitoring
+- JavaScript optimization
+- DOM and rendering performance
+- Network optimization
+
+### 📁 [Design Patterns](./design-patterns/) - Software design patterns
+- Creational patterns (Singleton, Factory, Prototype)
+- Structural patterns (Adapter, Decorator, Proxy)
+- Behavioral patterns (Observer, Strategy, Command)
+- Modern JavaScript patterns
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/codewithdhruba01/javascript-interview-questions.git
+   cd javascript-interview-questions
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run serve
+   ```
+
+4. **Run tests**
+   ```bash
+   npm test
+   ```
+
+## 📖 How to Use
+
+- **Browse by Topic**: Choose a folder based on your area of interest
+- **Practice Questions**: Each topic contains 15-30+ interview questions
+- **Code Examples**: All questions include runnable code examples
+- **Progressive Learning**: Start with fundamentals, then advance to complex topics
+
+## 🎯 Interview Preparation Tips
+
+1. **Focus on Fundamentals**: Master core JavaScript before frameworks
+2. **Practice Coding**: Implement concepts, don't just read
+3. **Understand Trade-offs**: Know when to use different approaches
+4. **Stay Updated**: Keep learning new JavaScript features
+5. **System Design**: Practice architectural questions
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines and submit pull requests for:
+- New interview questions
+- Code examples improvements
+- Topic expansions
+- Bug fixes
+
+## 📄 Legacy Questions (Original 50 Questions)
+
+For backward compatibility, the original 50 questions are still available below:
 
 ---
 
