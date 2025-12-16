@@ -55,6 +55,11 @@ Perfect for developers preparing for interviews or revising JavaScript fundament
 | 43 | [Why do we need a Promise in JavaScript](#43-why-do-we-need-a-promise-in-javascript)
 | 44 | [What are Closures](#44-what-are-closures)
 | 45 | [What is IndexedDB](#45-what-is-indexedDB)
+| 46 | [What is Collation?](#46-what-is-collation)
+| 47 | [Why do you need web storage](#47-why-do-you-need-web-storage)
+| 48 | [How do you delete a cookie](#48-how-do-you-delete-a-cookie)
+| 49 | [What is promise.all](#49-what-is-promise.all)
+| 50 | [What is undefined property](#50-what-is-undefined-property)
 
 ---
 
@@ -1186,5 +1191,79 @@ This behavior of remembering variables from the outer scope is called a **closur
 ## 45. What is IndexedDB
 
 IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 46. What is Collation
+Collation determines how strings are compared, sorted, and matched. It controls whether text comparison is case-sensitive or case-insensitive and how characters are ordered based on language rules.
+
+**Example:**
+In a case-insensitive collation, “Apple” and “apple” are treated as the same, while in case-sensitive collation they are considered different.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 47. Why do you need web storage
+Web Storage allows web applications to store data locally in the user’s browser, such as user preferences, login state, or theme settings. It improves performance by reducing server requests and provides a better user experience.
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 48. How do you delete a cookie
+To delete a cookie, we re-set the same cookie with the same name and path, but with an expiration date in the past, which tells the browser to remove it.
+
+**Example:**
+
+```javascript
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+```
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 49. What is promise.all
+`Promise.all()` takes an array of promises and returns a single promise. It resolves with an array of results when all promises succeed, but if any promise rejects, it immediately rejects with that error.
+
+**Example:**
+
+```javascript
+Promise.all([
+  fetch('/api/user'),
+  fetch('/api/posts'),
+  fetch('/api/comments')
+])
+.then(results => {
+  console.log("All promises resolved", results);
+})
+.catch(error => {
+  console.error("One promise failed", error);
+});
+```
+
+[🔼 Back to Top](#-table-of-contents)
+
+---
+
+## 50. What is undefined property
+In JavaScript, when we try to access an object property that is not defined or a variable that has been declared but not initialized, JavaScript returns undefined.
+
+**Example:**
+
+```javascript
+let user = { name: "Dhrub" };
+
+console.log(user.age); // undefined (property does not exist)
+```
+
+**Important Points:**
+
+* undefined is a primitive data type
+* It means absence of a value
+* Different from null (null is intentionally assigned)
 
 [🔼 Back to Top](#-table-of-contents)
